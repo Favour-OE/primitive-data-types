@@ -93,10 +93,10 @@ let secretCode = generateSecretCode()
 //  numerous variables for each check, and combine them at the end
 //
 ////////////////////// YOUR CODE BELOW THIS LINE ///////////////////////
-
-let codeIsValid = secretCode.length === 15 &&
-    secretCode[4] >= 'A' && secretCode[4] <= 'Z' &&
-    !isNaN(secretCode[9]) && secretCode[9] >= '0' && secretCode[9] <= '9'
+let fifthCharacter = secretCode[4] >= 'A' && secretCode[4] <= 'Z';
+let tenthCharacter = secretCode[9] >= '0' && secretCode[9] <= '9';
+let lengthOfCharacters = secretCode.length === 15;
+let codeIsValid = fifthCharacter && tenthCharacter && lengthOfCharacters
 
 ////////////////////////////////////////////////////////////////////////
 
