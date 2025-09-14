@@ -6,7 +6,7 @@
 #
 ###################### YOUR CODE BELOW THIS LINE #######################
 
-newBoolean = None
+newBoolean = 4 == 8
 
 ########################################################################
 
@@ -27,7 +27,7 @@ scoreToPass = 75
 #
 ###################### YOUR CODE BELOW THIS LINE #######################
 
-studentPasses = None
+studentPasses = examScore1 >= scoreToPass or examScore2 >= scoreToPass
 
 ########################################################################
 
@@ -57,11 +57,14 @@ student2Wood = random.randint(3, 5)
 student2Chuck = random.randint(4, 6)
 #
 ###################### YOUR CODE BELOW THIS LINE #######################
+import re
+numberOfWood = len(re.findall(r"wood(?!chuck)",tongueTwiser))
+numberOfChuck = len(re.findall(r"(?<!wood)chuck", tongueTwiser))
 
-numberOfWood = None
-numberOfChuck = None
-
-bothAtLeastOneCorrect = None
+bothAtLeastOneCorrect = (
+    (student1Wood == numberOfWood or student1Chuck == numberOfChuck) and
+    (student2Wood == numberOfWood or student2Chuck == numberOfChuck)
+)
 
 ########################################################################
 
@@ -83,12 +86,12 @@ truthy1 = truthy2 = None
 #
 ###################### YOUR CODE BELOW THIS LINE #######################
 
-# falsy1 = bool("")
-# falsy2 = bool(0)
-# falsy3 = bool(None)
+falsy1 = bool("")
+falsy2 = bool(0)
+falsy3 = bool(None)
 
-# truthy1 = bool("non-empty string")
-# truthy2 = bool(1)
+truthy1 = bool("non-empty string")
+truthy2 = bool(1)
 
 ########################################################################
 
